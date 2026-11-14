@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio </title>
+    <link rel="icon" type="image/x-icon" href="/images/eren.jpg">
+    <style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+        header{
+            display: flex;
+            justify-content: space-between;
+            background-color: #0f085b;
+            padding: 20px 30px;
+            top: 0;
+            position: fixed;
+            width: 100%;
+            z-index: 2;
+        }
+
+        #logo{
+            color: #a0d2e7
+        }
+
+        .links a{
+          color: #a0d2e7;
+        }
+
+        .links{
+            display: flex;
+            gap: 70px;
+           
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        #toggler{
+            display: none;
+        }
+
+        .hamburger-icon{
+            display:none;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .hamburger-icon span{
+            display: block;
+            width: 30px;
+            height: 2px;
+            background-color: #a0d2e7;
+            transition: 0.3s ease;
+        }
+
+        #toggler:checked + .hamburger-icon span:nth-child(1){
+            transform: translateY(10px) rotate(45deg);
+        }
+
+        #toggler:checked + .hamburger-icon span:nth-child(2) {
+            opacity: 0;
+        }
+        
+        #toggler:checked + .hamburger-icon span:nth-child(3) {
+            transform: translateY(-10px) rotate(-45deg);
+        }
+
+        .heroText{
+            
+           /* display: flex;
+            flex-direction: column;
+            width: 100%;
+            
+            padding: 80px 30px;
+            gap: 20px */
+            font-family: 'Courier New', Courier, monospace;
+            font-weight: 800;
+        }
+
+        .button {
+            background-color: #0f085b;
+            border-radius: 30px;
+            padding: 10px 20px;
+            color: #a0d2e7;
+            margin-top: 40px;
+        }   
+
+        .heroimage img{
+            object-fit: cover;
+            width: 100%;
+            height: 200px;
+        }
+
+        .hero{
+             margin-top: 100px;
+            display: flex;
+            padding: 0 5px;
+            gap: 200px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @media(max-width:900px) {
+        #toggler:checked ~ .links{
+            display: flex;
+        }
+
+        .links{
+            display: none;
+            width: 100%;
+            top: 100%;
+            flex-direction: column ;
+            position: absolute;
+            background-color:#0f085b;
+            align-items: center;
+            left: 0;
+            gap: 10px;
+            padding: 5px;
+        }
+
+        .hamburger-icon{
+            display: flex;
+        }
+        }
+
+    </style>
+
+</head>
+<body>
+   <header>
+    <div id="logo">JA</div>
+<input id="toggler" type="checkbox">
+
+<label class="hamburger-icon" for="toggler">
+    <span></span>
+    <span></span>
+    <span></span>
+</label>
+
+    <nav class="links">
+        <a href="#">Home</a>
+        <a href="#">About</a>
+        <a href="#">Skills</a>
+        <a href="#">Contact</a>
+    </nav>
+
+   </header> 
+
+   <section class="hero">
+    <div class="heroText">
+        <p id="p1">
+            Yo, hisashiburi
+        </p>
+
+        <h1 id="h1">
+        Joshua
+        </h1>
+
+        <p> <form action="/response.php">
+
+
+    </form>
+            A young web developer <br>
+            i llke watching anime and creating partially <br>
+            working websites with html and css
+        </p>
+
+        <a class="button" href="#">Dont contact me</a>
+    </div>
+    <div class="heroimage"><img src="/images/eren.png" alt=""></div>
+   </section>
+</body>
+</html>

@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crestwood Academy | Registration</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #F0F5FF;
+            color: #142B4A;
+            padding: 50px 20px;
+        }
+
+        .form-container {
+            max-width: 750px;
+            margin: auto;
+            background: white;
+            padding: 40px;
+            border-radius: 18px;
+            box-shadow: 0 10px 35px rgba(30, 65, 125, 0.08);
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        .form-header h1 {
+            font-size: 30px;
+            margin-bottom: 10px;
+            color: #142B4A;
+        }
+
+        .form-header p {
+            color: #64748B;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .form-section {
+            margin-bottom: 30px;
+        }
+
+        .form-section h2 {
+            font-size: 19px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #E2EAF5;
+            color: #24518A;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        input,
+        select,
+        textarea {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #D5DFED;
+            border-radius: 8px;
+            outline: none;
+            font-size: 14px;
+            font-family: inherit;
+            background: #FAFCFF;
+            color: #142B4A;
+            transition: 0.3s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #3978F6;
+            background: white;
+            box-shadow: 0 0 0 3px rgba(57, 120, 246, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 110px;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            border: none;
+            border-radius: 9px;
+            background: #3978F6;
+            color: white;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: 0.3s ease;
+        }
+
+        button:hover {
+            background: #245CCB;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 18px rgba(57, 120, 246, 0.2);
+        }
+
+        #message {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 14px;
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 22px;
+            text-decoration: none;
+            color: #3978F6;
+            font-size: 14px;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Mobile */
+
+        @media (max-width: 600px) {
+            body {
+                padding: 20px 12px;
+            }
+
+            .form-container {
+                padding: 25px 18px;
+            }
+
+            .form-header h1 {
+                font-size: 25px;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+                gap: 17px;
+            }
+
+            .form-group.full {
+                grid-column: span 1;
+            }
+
+            .form-section h2 {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="form-container">
+
+        <div class="form-header">
+            <h1>Crestwood Academy</h1>
+            <p>Student Admission Form</p>
+            <p>Please complete the form below to begin your admission application.</p>
+        </div>
+
+        <form action="#" id="registrationForm">
+
+            <div class="form-section">
+                <h2>Student Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="Fname">First Name</label>
+                        <input type="text" id="Fname" name="Fname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Mname">Middle Name</label>
+                        <input type="text" id="Mname" name="Mname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="DateOfBirth">Date of Birth</label>
+                        <input type="date" id="DateOfBirth" name="DateOfBirth" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Gender">Gender</label>
+                        <select id="Gender" name="Gender" required>
+                            <option value="">Select</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Semail">Student Email Address</label>
+                        <input type="email" id="Semail" name="Semail" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="Pnumb">Phone Number</label>
+                        <input type="tel" id="Pnumb" name="Pnumb" required>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="Hadd">Home Address</label>
+                        <textarea id="Hadd" name="Hadd" required></textarea>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Academic Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+                        <label for="ClassGradeApplyingFor">Class/Grade Applying For</label>
+                        <input type="text" id="ClassGradeApplyingFor" name="ClassGradeApplyingFor" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="PreviousSchoolAttended">Previous School Attended</label>
+                        <input type="text" id="PreviousSchoolAttended" name="PreviousSchoolAttended" required>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h2>Parent / Guardian Information</h2>
+
+                <div class="form-grid">
+
+                    <div class="form-group full">
+                        <label for="ParentGuardianFullName">Parent/Guardian Full Name</label>
+                        <input type="text" id="ParentGuardianFullName" name="ParentGuardianFullName" required>
+                    </div>
+
+                    <div class="form-group full">
+                        <label for="ParentGuardianPhoneNumber">Parent/Guardian Phone Number</label>
+                        <input type="tel" id="ParentGuardianPhoneNumber" name="ParentGuardianPhoneNumber" required>
+                    </div>
+
+                </div>
+            </div>
+
+            <button id="apply" type="submit">Submit Application</button>
+
+        </form>
+
+        <p id="message"></p>
+
+        <a href="test_form.html" class="back-link">← Back to Home</a>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
